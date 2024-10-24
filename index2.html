@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="parent">
+        <h2 id="special">Computer Choice - <span id="computerchoice"></span></h2>
+        <h2>Player Choice - <span id="playerchoice"></span></h2>
+        <h2>Who Won - <span id="win"></span></h2>
+    <div class="buttons">
+        
+        <button id="rock" onclick=rock()>ROCK</button>
+        <button id="paper" onclick=paper()>PAPER</button>
+        <button id="scissor" onclick=scissor()>SCISSOR</button>
+    
+    </div>
+    </div>
+
+    <script>
+        function rock() {
+            document.getElementById("playerchoice").innerHTML = "Rock";
+            let math = Math.floor(Math.random() * 3) + 1;
+            let computerChoice;
+            if(math === 1) {
+                computerChoice = "Rock";
+            }else if (math === 2) {
+                computerChoice = "Paper";
+            }else{
+                computerChoice = "Scissor";
+            }
+            document.getElementById("computerchoice").innerHTML = computerChoice;
+            if(computerChoice === "Rock") {
+                document.getElementById("win").innerHTML = "TIE!🤝🏻";
+            }else if(computerChoice === "Scissor") {
+                document.getElementById("win").innerHTML = "You Won!😏";
+            }else{
+                document.getElementById("win").innerHTML = "You lose!😭";
+            }
+        }
+        function paper() {
+            document.getElementById("playerchoice").innerHTML = "Paper";
+            let math = Math.floor(Math.random() * 3) + 1;
+            let computerChoice;
+            if (math === 1) {
+                computerChoice = "Rock";
+            } else if (math === 2) {
+                computerChoice = "Paper";
+            } else {
+                computerChoice = "Scissor";
+            }
+            document.getElementById("computerchoice").innerHTML = computerChoice;
+            if (computerChoice === "Paper") {
+                document.getElementById("win").innerHTML = "TIE!🤝🏻";
+            } else if (computerChoice === "Rock") {
+                document.getElementById("win").innerHTML = "You Won!😏";
+            } else {
+                document.getElementById("win").innerHTML = "You lose!😭";
+            }
+        }
+        function scissor() {
+            document.getElementById("playerchoice").innerHTML = "Scissor";
+            let math = Math.floor(Math.random() * 3) + 1;
+            let computerChoice;
+            if (math === 1) {
+                computerChoice = "Rock";
+            } else if (math === 2) {
+                computerChoice = "Paper";
+            } else {
+                computerChoice = "Scissor";
+            }
+            document.getElementById("computerchoice").innerHTML = computerChoice;
+            if (computerChoice === "Scissor") {
+                document.getElementById("win").innerHTML = "TIE!🤝🏻";
+            }else if(computerChoice === "Paper") {
+                document.getElementById("win").innerHTML = "You Won!😏";
+            }else{
+                document.getElementById("win").innerHTML = "You lose!😭";
+            }
+        }
+    </script>
+</body>
+</html>
